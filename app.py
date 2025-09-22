@@ -2,29 +2,29 @@ from flask import Flask
 from flask import render_template
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/') #Главная страница
 def index ():
-    return "Главная страница"
+    return render_template("index.html")
 
-@app.route('/shop')
-def shop():
-    return "Каталог"
+@app.route('/catalog') #Главная страница
+def catalog ():
+    return render_template("catalog.html")
 
-@app.route('/support')
+@app.route('/support') # Обратная связь 
 def support():
-    return "Поддержка"
+    return render_template("support.html")
 
-@app.route('/about')
+@app.route('/about') # о нас
 def about():
-    return "О нас"
+    return render_template("about.html")
 
-@app.route('/sale')
+@app.route('/sale') #скидки и акции
 def sale():
-    return "Скидки"
+    return render_template("sale.html")
 
-@app.route('/news')
+@app.route('/news') # новости
 def news():
-    return "новости"
+    return render_template("news.html")
 
 @app.route('/user/<username>')
 def user_profile(username):
