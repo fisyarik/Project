@@ -1,10 +1,23 @@
 from flask import Flask
 from flask import render_template
+
+import sqlite3 
+
 app = Flask(__name__)
 
+connection = sqlite3.connect('my_datebase.db', check_same_thread=False)
+cursor = connection.cursor()
+
+# функции для работы с db
+def productDB():# возвращаем данные в товары 
+    listDB = cursor.execute('SELECT * FROM product')
+    return listDB.fetchall() # возвращаем данные в list
+
+# контроллер
 @app.route('/') #Главная страница
-def index ():
-    return render_template("index.html")
+def index():
+    shop = productDB()
+    return render_template("index.html", shop = shop)
 
 @app.route('/catalog') #Главная страница
 def catalog ():
