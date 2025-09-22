@@ -1,0 +1,28 @@
+{# это шаблон для сайта #}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> {% block title %} <title>Life is style{% endblock %}</title>
+</head>
+<body bgcolor="PeachPuff" text = "black">
+
+    {% block nav %}
+    <ul>
+        <li><a href="/">Главная страница</a></li><!--элементы списка-->
+        <li><a href="/shop">Каталог</a></li>
+        <li><a href="/sale">скидки</a></li>
+        <li><a href="/about">О нас</a></li>
+        <li><a href="/news">Новости</a></li>
+        <li><a href="/support">Поддержка</a></li>
+
+    </ul>
+    {% endblock %}
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
