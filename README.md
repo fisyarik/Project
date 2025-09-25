@@ -55,7 +55,7 @@ app = Flask(__name__)
 ## Технологии
 
 Backend: Python + Flask
-Frontend: HTML + CSS (+Bootstrap для дизайна)
+Frontend: HTML + CSS 
 Database: SQLite3
 Template Engine: Jinja2 (встроенный в Flask)
 
