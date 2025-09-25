@@ -73,3 +73,6 @@ Template Engine: Jinja2 (встроенный в Flask)
 
 Ваше имя или название команды – [anfisaunny@gmail.com](mailto:anfisaunny@gmail.com)
 * Ссылка на проект: [https://github.com/fisyarik/Project.git](https://github.com/fisyarik/Project.git)
+
+
+ссылка на яндек диск : https://disk.yandex.ru/d/22JPM-eI3H2VvA
