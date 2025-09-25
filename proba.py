@@ -1,14 +1,18 @@
-import sqlite3
-# Создаем подключение к базе данных (файл называется"my_database.bd)
-connection = sqlite3.connect('my_datebase.bd')
-# закрытие базы данных 
-connection.close
+from flask import Flask, render_template,request
 
-cursor = connection.cursor()
+app = Flask(__name__)
 
-def productDB():
-    listDB = cursor.execute('SELECT * FROM product')
-    return listDB.fetchall()
+@app.route('/', methods=['post','get'])
+def integer():
+    messege = ''
+    if request.method == 'POST':
+        user = request.form.get('user')
+        password = request.form.get('password')
+        messege = messege+user + ' ' + password
+        return render_template('proba.html',messege == messege)
 
-if __name__ == '__main__':
-    print(productDB())
+    return render_template("proba.html",messege='Форма готова для принятия данных')
+
+if __name__=='__main__':
+    print("run server")
+    app.run()
